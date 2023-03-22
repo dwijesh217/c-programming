@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int day, month, year;
+
+    printf("Enter the date in the format of DD/MM/YYYY: ");
+    scanf("%d/%d/%d", &day, &month, &year);
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("%d is a Leap Year", year);
+    }
+    else {
+        printf("%d is not a Leap Year", year);
+    }
+
+    return 0;
+}
