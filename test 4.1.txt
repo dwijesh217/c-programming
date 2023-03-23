@@ -20,3 +20,11 @@ int main() {
     }
     printf("The number of composite numbers in the array is %d\n", count);
     return 0;
+    
+    output:
+    Enter the size of the array: 3
+Enter the elements of the array:
+12
+23
+45
+The number of composite numbers in the array is 2
