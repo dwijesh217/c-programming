@@ -10,3 +10,5 @@ int main() {
     printf("There are %d negative numbers in the array.\n", count);
     return 0;
 }
+ output:
+ There are 5 negative numbers in the array.
