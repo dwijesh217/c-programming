@@ -1,0 +1,45 @@
+#include <stdio.h>
+int countVowelsAndConsonants(char *str, int *vowels, int *consonants);
+int main() {
+    char str[100];
+    int vowels = 0, consonants = 0;
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+    countVowelsAndConsonants(str, &vowels, &consonants);
+    printf("Number of vowels: %d\n", vowels);
+    printf("Number of consonants: %d\n", consonants);
+    return 0;
+}
+int countVowelsAndConsonants(char *str, int *vowels, int *consonants) {
+    char c;
+    while (*str) {
+        c = *str;
+        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || 
+                c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+                (*vowels)++;
+            } else {
+                (*consonants)++;
+            }
+        }
+        str++;
+    }
+    return 0;
+}
+
+output:
+1.Enter a string:HYPOTHECATION
+Number of vowels: 5
+Number of consonants: 7
+2.Enter a string: MATRICULATION
+Number of vowels: 6
+Number of consonants: 7
+3.Enter a string: MANIPULATION
+Number of vowels: 6
+Number of consonants: 6
+4.Enter a string: SEDIMENTATION
+Number of vowels: 6
+Number of consonants: 7
+5. Enter a string: EXPERIMENTATION
+Number of vowels: 7
+Number of consonants: 8
